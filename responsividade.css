@@ -1,0 +1,144 @@
+@media (max-width: 768px) {
+  article {
+    padding: 20px;
+  }
+
+  section {
+    height: auto;
+    margin-bottom: 60px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3,
+  h4 {
+    font-size: 16px;
+  }
+
+  /* SOBRE */
+  .sobre {
+    padding-top: 0;
+  }
+
+  .sobre_centro {
+    width: 95%;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .sobre_centro .textosobre,
+  .sobre_centro .imgsobre {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sobre_centro .imgsobre img {
+    width: 80%;
+    height: auto;
+  }
+
+  /* BOTÕES */
+  .botao {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  /* CARDS */
+  .cards {
+    padding: 10px;
+    width: 95%;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .card {
+    width: 100%;
+
+  }
+
+
+
+  /* SOBRE CHINA */
+  .sobrechina {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .sobrechina img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  .ldesquerdo,
+  .lddireito {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* SLIDER */
+  #tranding {
+    padding: 3rem 0;
+  }
+
+  .tranding-slide {
+    width: 90% !important;
+    height: auto !important;
+  }
+
+  .tranding-slide img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* DÚVIDAS */
+  .colapsador .label {
+    font-size: 14px;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+    text-align: center;
+  }
+
+  /* ZOOM DESATIVADO */
+  html {
+    zoom: 1 !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .sobre_centro {
+    width: 90%;
+  }
+
+  .cards {
+    width: 90%;
+  }
+
+  .card {
+    width: 48%;
+  }
+
+  .botao {
+    width: 60%;
+  }
+
+  .ldesquerdo,
+  .lddireito {
+    width: 48%;
+  }
+}

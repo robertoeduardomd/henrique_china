@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+@keyframes mudarcores {
+    0% {
+        filter: hue-rotate(140deg);
+
+    }
+
+    50% {
+        filter: hue-rotate(180deg);
+
+    }
+
+    100% {
+        filter: hue-rotate(130deg);
+
+    }
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    background-color: rgb(37, 37, 37);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #008000;
+    border-radius: 30px;
+
+}
+
+.imgfundo {
+
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    padding-top: 10px;
+    object-fit: cover;
+    z-index: -1;
+    animation: mudarcores 20s infinite;
+
+}
+
+
+
+
+body {
+    position: relative;
+    background: black;
+    letter-spacing: 2px;
+}
+
+
+
+h1 {
+    font-size: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    letter-spacing: 2px;
+    color: white;
+
+
+    font-family: sans-serif;
+}
+
+article {
+
+    font-family: 'BebasNeue', sans-serif;
+    flex-direction: column;
+
+}
+
+section {
+
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 100px;
+    backdrop-filter: blur(10px);
+}
+
+
+
+
+.sobre {
+    width: 100%;
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sobre_centro {
+    position: relative;
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.sobre_centro .textosobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.sobre_centro .textosobre .sobre_logo {
+    font-size: 30px;
+
+
+}
+
+.sobre_centro .textosobre .sobre_logo h3 {
+    text-align: left;
+
+}
+
+.sobre_centro .textosobre img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
+
+.sobre_centro .imgsobre {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    overflow: hidden;
+}
+
+.sobre_centro .imgsobre img {
+
+    width: 100%;
+    height: 90%;
+    object-fit: contain;
+}
+
+
+
+
+.iconewwp {
+    color: black;
+    z-index: 99;
+    position: fixed;
+    right: 10px;
+    bottom: 100px;
+    width: 50px;
+    transition: .5s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.iconewwp img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.iconewwp:before {
+    right: 60px;
+    padding: 0px;
+
+    border-radius: 30px;
+    position: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    content: "Whatsapp China";
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    background-color: #008000;
+    color: white;
+    font-size: 16px;
+    width: 0;
+    height: 10px;
+    overflow: hidden;
+    transition: .2s ease;
+}
+
+.iconewwp:hover::before {
+    padding: 10px;
+    width: 150px;
+}
+
+.hchina {
+    width: 300px;
+    border-radius: 50%;
+}
+
+.centro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linksexternos {
+    margin-top: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cards {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    cursor: grab;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    backdrop-filter: blur(20px);
+    width: 32%;
+    height: 150px;
+    border: 1px solid #008000;
+    transition: 0.3s linear;
+    border-radius: 40px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 35px white;
+}
+
+.cardb {
+    border: 1px solid white;
+    color: #008000;
+    box-shadow: 0 0 35px #008000;
+}
+
+.cards .card .cardfrente {
+    transition: 0.3s linear;
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    height: auto;
+}
+
+.cards .card .cardverso {
+    width: 100%;
+    height: auto;
+
+    padding: 10%;
+    transition: 0.3s linear;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards .card .cardfrente img {
+    width: 20%;
+    object-fit: contain;
+}
+
+.cards .card:hover {
+    background: linear-gradient(90deg, black, transparent, black);
+    z-index: 3;
+    transform: scale(1.2);
+    backdrop-filter: blur(9px);
+}
+
+.cards .card:hover .cardfrente {
+    opacity: 0;
+}
+
+.cards .card:hover .cardverso {
+    color: white;
+    opacity: 1;
+
+}
+
+.inverter {
+    filter: invert(1);
+}
+
+.brancopreto {
+    filter: grayscale(1);
+}
+
+.sobrechina {
+
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.sobrechina img {
+    padding-right: 100px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: contain;
+}
+
+.ldesquerdo,
+.lddireito {
+    backdrop-filter: blur(30);
+    color: white;
+    width: 40%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    width: 33%;
+    height: 40px;
+    color: white;
+    background: #008000;
+    transition: 0.2s linear;
+    border: none;
+    box-shadow: 0px 0px 24px rgb(24, 61, 0);
+
+}
+
+.botao:hover {
+    transform: scale(0.9);
+    background: #014d01;
+    color: white;
+}
+
+.duvidas {
+    text-align: center;
+    padding: 20px;
+}
+
+.colapsador {
+
+    position: relative;
+    margin: 10px 0px;
+}
+
+.colapsador .label {
+    width: 100%;
+    border: 1px solid #00ad48;
+    font-size: 16px;
+    position: relative;
+    padding: 20px;
+    background: linear-gradient(45deg, #00ad48, black, black, #00ad48);
+    color: white;
+    border-radius: 30px;
+    cursor: url(../public/imgs/neonlinkselect.cur), pointer;
+
+}
+
+.colapsador .label::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+
+}
+
+.colapsador.active .label::before {
+    content: "-";
+}
+
+.colapsador.active {
+
+    border-radius: 30px;
+}
+
+.colapsador .conteudocolapsador {
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    position: relative;
+    height: 0;
+    transition: 0.5s;
+    overflow: hidden;
+    transition: .5s;
+    border-radius: 30px;
+
+}
+
+.colapsador .conteudocolapsador p {
+    font-size: 14px;
+    color: black;
+    text-align: justify;
+}
+
+.colapsador.active .conteudocolapsador {
+    padding: 20px;
+    height: auto;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(45deg, #008000, black, transparent, black, #008000);
+    backdrop-filter: blur(8px);
+    color: white;
+    top: 0;
+    padding: 20px;
+}
+
+footer a {
+    color: aqua;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer .eduardo {
+    transition: 0.5s linear;
+}
+
+footer .eduardo:hover {
+    color: #4cfd9c;
+    font-size: large;
+
+    text-decoration: underline;
+}
+
+.redessociais,
+.funcionamento {
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.redessociais ul {
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    list-style-type: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: row;
+}
+
+.redessociais ul li {
+    color: white;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.5s linear;
+    cursor: url(../public/imgs/neonlinkselect.cur), pointer;
+    overflow: hidden;
+}
+
+.redessociais ul li:hover {
+    width: 180px;
+    box-shadow: 0.2px 1px 10px rgb(255, 255, 255);
+}
+
+.redessociais ul li .icon {
+    color: rgb(1, 221, 118);
+    font-size: 1.5em;
+    transition: all 0.1s linear;
+}
+
+.redessociais ul li .text {
+
+    font-size: 18px;
+    cursor: pointer;
+    transform: scale(0);
+    transition: all 0.1s linear;
+    position: absolute;
+}
+
+.redessociais ul li:hover .text {
+    transform: scale(1);
+}
+
+.redessociais ul li:hover .icon {
+    transform: scale(0);
+
+}
+
+.redessociais ul li span {
+    position: absolute;
+}
+
+.redessociais ul li::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(45deg, var(--cor1), var(--cor2));
+    inset: 0;
+    opacity: 0;
+    border-radius: 60px;
+}
+
+.redessociais ul li:hover::before {
+    opacity: 1;
+}
